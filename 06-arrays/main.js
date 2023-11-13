@@ -100,7 +100,7 @@ const customers = [
 ];
 
 const mappedResult = customers.map(function (customer){
-    return customer.address.charAt(0);
+    return customer.id;
 });
 
 console.log("Mapping", mappedResult);
@@ -139,11 +139,87 @@ let myObj2 = {
     address: 'Galle'
 };
 
+let myNumList = [10,20,30,40,50,60,70,80,90];
+// start = inclusive
+// end = exclusive
+console.log(myNumList.slice(2));
+console.log(myNumList.slice(2, 4));
 
+let studentList = [
+    {id: 'S001', name: 'Kasun', address: 'Galle'},
+    {id: 'S002', name: 'Nuwan', address: 'Panadura'},
+    {id: 'S003', name: 'Ruwan', address: 'Matara'},
+    {id: 'S004', name: 'Supun', address: 'Galle'},
+];
 
+result = studentList.some(function(s) {
+    return s.address === 'Galle';
+});
 
+console.log(result);
 
+nums = [5,2,3,1,0,2-3,2];
+// nums.sort();
+const cloneNums = nums.toSorted();
 
+console.log(nums);
+console.log(cloneNums.reverse());
 
+const clonedStudentList = studentList.toReversed();
+console.log(studentList);
+console.log(clonedStudentList);
+
+studentList = [
+    {id: 'S001', name: 'Kasun', marks: 85, subject: 'oop'},
+    {id: 'S002', name: 'Nuwan', marks: 65, subject: 'oop'},
+    {id: 'S003', name: 'Ruwan', marks: 95, subject: 'oop'},
+    {id: 'S004', name: 'Supun', marks: 25, subject: 'oop'}
+];
+
+studentList.sort(function (s1, s2) {
+    if (s1.marks === s2.marks) return 0;
+    else if (s1.marks > s2.marks) return -5;
+    else return 5;
+});
+
+console.log(studentList);
+
+result = studentList.every(function(e){
+    return e.subject === 'oop';
+});
+
+console.log(result);
+
+/* 
+push <=> unshift
+pop <=> shift
+splice
+slice
+find, findLast
+findIndex, findLastIndex
+indexOf, lastIndexOf
+includes
+every
+some
+filter
+forEach
+map
+sort
+reverse
+toSorted
+toReversed
+concat
+join
+reduce
+*/
+
+const someArray = ['He', 'll', 'o',' ', 'DE', 'P', 11];
+console.log(someArray.join('-'));
+
+result = someArray.reduce((prev, cur)=>{
+    return prev + cur;
+},'👋');
+
+console.log(result);
 
 
