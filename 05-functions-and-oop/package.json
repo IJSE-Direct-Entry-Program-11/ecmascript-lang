@@ -18,6 +18,8 @@
     "start13": "nodemon private-in-classes.js",
     "start14": "nodemon static-in-classes.js",
     "start15": "nodemon class-expression.js",
-    "start16": "nodemon accessor-notation.js"
+    "start16": "nodemon accessor-notation.js",
+    "start17": "nodemon generator-functions.js",
+    "start18": "nodemon generator-functions2.js"
   }
 }
